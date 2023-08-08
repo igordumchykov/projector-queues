@@ -3,6 +3,10 @@
 - tests Beanstalkd queue
 - all tests do insert 10000, 30000, 50000 key-value pairs in the queue and calculate execution time needed to publish and consume all values
 
+# Prerequisites
+1. Docker 
+2. java 18
+
 # Run Queues
 ```shell
 docker-compose up -d
@@ -16,7 +20,7 @@ for each test (6379 - RDB, 6378 - AOF, 6377 - AOF+RDB)
 4. For beanstalk test uncomment [function](./app/src/main/kotlin/com/jdum/projector/queues/AppApplication.kt) - testBeanstalkdQueue
 5. Run
 ```shell
-./gradlew clean bootRun
+cd app & ./gradlew clean bootRun
 ```
 
 # Test Results
