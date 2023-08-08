@@ -1,0 +1,12 @@
+application:
+  message-count: 50000
+  redis:
+    host: localhost
+    port: 6377
+    topic: test-rdb
+  beanstalkd:
+    host: localhost
+    port: 11300
+    connection-timeout: 2000
+    read-timeout: 3000
+    topic: pctube
